@@ -7,6 +7,7 @@ class Node:
     """
     Individual nodes in linked list
     """
+
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -19,6 +20,7 @@ class SinglyLinkedList:
     """
     Singly linked list class
     """
+
     def __init__(self, nodes=None):
         self.head = None
         if nodes is not None:
@@ -47,9 +49,36 @@ class SinglyLinkedList:
             yield node
             node = node.next
 
+    def add_first(self, node):
+        """
+        Add node to beginning of list
+        :param data:
+        :return:
+        """
+        node.next = self.head
+        self.head = node
+
+    def add_last(self, node):
+        """
+        Add node at the end
+        :param node: Node object
+        :return:
+        """
+        if not self.head:
+            self.head = node
+            return
+        n = self.head
+        for current_node in self:
+            pass
+        current_node.next = node
+
 
 if __name__ == "__main__":
     sllist = SinglyLinkedList(["a", "b", "c", "d", "e"])
     print(sllist)
     for n in sllist:
         print(n)
+    sllist.add_first(Node("z"))
+    print(sllist)
+    sllist.add_last(Node("f"))
+    print(sllist)
