@@ -52,7 +52,7 @@ class SinglyLinkedList:
     def add_first(self, node):
         """
         Add node to beginning of list
-        :param data:
+        :param node: Node object
         :return:
         """
         node.next = self.head
