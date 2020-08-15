@@ -64,6 +64,7 @@ class SinglyLinkedList:
         :param node: Node object
         :return:
         """
+        
         if not self.head:
             self.head = node
             return
