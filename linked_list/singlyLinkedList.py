@@ -20,7 +20,6 @@ class SinglyLinkedList:
     """
     Singly linked list class
     """
-
     def __init__(self, nodes=None):
         self.head = None
         if nodes is not None:
