@@ -7,7 +7,6 @@ class Node:
     """
     Individual nodes in linked list
     """
-
     def __init__(self, data):
         self.data = data
         self.next = None
